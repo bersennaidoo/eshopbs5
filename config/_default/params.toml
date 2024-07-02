@@ -1,0 +1,9 @@
+[[footer]]
+title = "About"
+content = """
+EShop Template is the world's leading  manufacturer of surgical products.
+"""
+
+[[footer]]
+title = "Contact Us"
+contact = true
