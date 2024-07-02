@@ -22,8 +22,3 @@ enableEmoji = true
   url = "/contact"
   weight = 300
   
-[markup.goldmark.renderer]
-unsafe = true
-
-[markup.highlight]
-lineNos = true

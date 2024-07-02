@@ -6,9 +6,3 @@ draft = false
 
 Privacy Policy
 ==============
-
-```javascript 
-var x = 10;
-console.log(x);
-```
-:smile:
