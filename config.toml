@@ -2,23 +2,3 @@ baseURL = 'https://example.org/'
 languageCode = 'en-us'
 title = 'EShop bs5'
 theme = "bs5theme"
-enableEmoji = true
-
-[[menus.main]]
-  identifier = "HOME"
-  name = "HOME"
-  url = "/"
-  weight = 100
-
-[[menus.main]]
-  identifier = "ABOUT"
-  name = "ABOUT"
-  url = "/about"
-  weight = 200
-
-[[menus.main]] 
-  identifier = "CONTACT"
-  name = "CONTACT"
-  url = "/contact"
-  weight = 300
-  
