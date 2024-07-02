@@ -1,5 +1,0 @@
-baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'EShop bs5'
-theme = "bs5theme"
-enableEmoji = true
