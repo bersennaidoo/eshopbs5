@@ -2,6 +2,7 @@ baseURL = 'https://example.org/'
 languageCode = 'en-us'
 title = 'EShop bs5'
 theme = 'bs5theme'
+enableGitInfo = true
 
 [[menus.main]] 
   identifier = "HOME"
@@ -10,9 +11,9 @@ theme = 'bs5theme'
   weight = 100
 
 [[menus.main]] 
-  identifier = "SHOP"
-  name = "SHOP"
-  url = "/shop"
+  identifier = "SUPERSTORE"
+  name = "SUPERSTORE"
+  url = "/superstore"
   weight = 200
 
 [[menus.main]] 
