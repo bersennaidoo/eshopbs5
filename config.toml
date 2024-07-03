@@ -2,3 +2,27 @@ baseURL = 'https://example.org/'
 languageCode = 'en-us'
 title = 'EShop bs5'
 theme = 'bs5theme'
+
+[[menus.main]] 
+  identifier = "HOME"
+  name = "HOME"
+  url = "/"
+  weight = 100
+
+[[menus.main]] 
+  identifier = "SHOP"
+  name = "SHOP"
+  url = "/shop"
+  weight = 200
+
+[[menus.main]] 
+  identifier = "ABOUT"
+  name = "ABOUT"
+  url = "/about"
+  weight = 300
+
+[[menus.main]] 
+  identifier = "CONTACT"
+  name = "CONTACT"
+  url = "/contact"
+  weight = 400
