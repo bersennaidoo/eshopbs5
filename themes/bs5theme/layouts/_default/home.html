@@ -1,3 +1,26 @@
 {{ define "main" }}
+  <h1>{{ .Title }}</h1>
+  {{ with .Param "subtitle" }}<h2>{{ . | humanize | markdownify }}</h2>{{ end }}
+  <a href="{{ ref . (.Param "explore") }}">Explore</a>
+  {{ with (where site.RegularPages ".Section" "in" site.Params.mainSections) }}
+  <section>
+    <h1>From our superstore</h1>
+    <ul>
+      {{ range first 4 . }}
+      <li>
+        <a href="{{ .Permalink }}">
+          <h2>
+            {{ .Title }}
+          </h2>
+          <article>
+            {{ .Summary }}
+          </article>
+          <div>Read More</div>
+        </a>
+      </li>
+      {{ end }}
+    </ul>
+  </section>
+  {{ end }}
   {{ .Content }}
 {{ end }}

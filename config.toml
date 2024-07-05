@@ -1,8 +1,9 @@
 baseURL = 'https://example.org/'
 languageCode = 'en-us'
-title = 'EShop bs5'
+title = 'ESuperstore'
 theme = 'bs5theme'
 enableGitInfo = true
+sectionPagesMenu = "superstore"
 
 [[menus.main]] 
   identifier = "HOME"
@@ -27,3 +28,15 @@ enableGitInfo = true
   name = "CONTACT"
   url = "/contact"
   weight = 400
+
+[[menus.footer]]
+  identifier = "About"
+  name = "About"
+  url = "/about"
+  weight = 500
+
+[[menus.footer]] 
+  identifier = "Contact"
+  name = "Contact"
+  url = "/contact"
+  weight = 600
