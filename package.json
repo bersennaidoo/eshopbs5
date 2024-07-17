@@ -1,0 +1,32 @@
+{
+  "comments": {
+    "dependencies": {
+      "@fortawesome/fontawesome-free": "bs5theme",
+      "@popperjs/core": "bs5theme",
+      "animate.css": "bs5theme",
+      "bootstrap": "bs5theme",
+      "jquery": "bs5theme",
+      "jquery.easing": "bs5theme",
+      "lightbox2": "bs5theme",
+      "tiny-slider": "bs5theme",
+      "waypoints": "bs5theme",
+      "wow.js": "bs5theme"
+    },
+    "devDependencies": {}
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.5.2",
+    "@popperjs/core": "^2.11.8",
+    "animate.css": "^4.1.1",
+    "bootstrap": "^5.3.3",
+    "jquery": "^3.7.1",
+    "jquery.easing": "^1.4.1",
+    "lightbox2": "^2.11.4",
+    "tiny-slider": "*",
+    "waypoints": "^4.0.1",
+    "wow.js": "^1.2.1"
+  },
+  "devDependencies": {},
+  "name": "eshopbs5",
+  "version": "0.1.0"
+}

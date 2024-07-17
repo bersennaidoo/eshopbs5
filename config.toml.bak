@@ -3,7 +3,19 @@ languageCode = 'en-us'
 title = 'ESuperstore'
 theme = 'bs5theme'
 enableGitInfo = true
-sectionPagesMenu = "superstore"
+
+[module]
+[[module.mounts]]
+source = "node_modules/bootstrap/scss"
+target = "assets/scss"
+
+[[module.mounts]]
+source = "node_modules/@fortawesome/fontawesome-free"
+target = "static/fontawesome"
+
+[[module.mounts]]
+source = "node_modules"
+target = "static/js"
 
 [[menus.main]] 
   identifier = "HOME"

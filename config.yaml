@@ -1,0 +1,32 @@
+baseURL: 'https://example.org/'
+languageCode: 'en-us'
+title: 'ESuperstore'
+theme: 'bs5theme'
+enableGitInfo: true
+
+module:
+  mounts:
+    - source: "node_modules/bootstrap/scss"
+      target: "assets/scss"
+    - source: "node_modules/@fortawesome/fontawesome-free"
+      target: "static/fontawesome"
+    - source: "node_modules"
+      target: "static/js"
+
+menus:
+  main:
+    - identifier: "HOME"
+      name: "HOME"
+      url: "/"
+      weight: 100
+    - identifier: "SUPERSTORE"
+      name: "SUPERSTORE"
+      url: "/superstore"
+      weight: 200
+
+  footer:
+     - identifier: "About"
+       name: "About"
+       url: "/about"
+       weight: 500
+

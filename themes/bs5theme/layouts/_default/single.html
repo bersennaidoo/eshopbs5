@@ -1,8 +1,2 @@
 {{ define "main" }}
-  <h3>{{ .Title }}</h3>
-  {{ .Content }}
-  {{ with .Params }}
-  <p>{{ .id }} {{ .name }} {{ .price }} {{ .description }}</p>
-  {{ end }}
-  {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
 {{ end }}
