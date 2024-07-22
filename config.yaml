@@ -1,6 +1,6 @@
 baseURL: 'https://example.org/'
 languageCode: 'en-us'
-title: 'ESuperstore'
+title: 'SurgiMedShop'
 theme: 'bs5theme'
 enableGitInfo: true
 
@@ -15,13 +15,13 @@ module:
 
 menus:
   main:
-    - identifier: "HOME"
-      name: "HOME"
+    - identifier: "Home"
+      name: "Home"
       url: "/"
       weight: 100
-    - identifier: "SUPERSTORE"
-      name: "SUPERSTORE"
-      url: "/superstore"
+    - identifier: "Shop"
+      name: "Shop"
+      url: "/shop"
       weight: 200
 
   footer:

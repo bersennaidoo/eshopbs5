@@ -1,12 +1,6 @@
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://app.snipcart.com" />
 <link rel="preconnect" href="https://cdn.snipcart.com" />
 <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.3.1/default/snipcart.css" />
-<link rel="stylesheet" href="/fontawesome/css/all.min.css">
-<link rel="stylesheet" href="/js/animate.css/animate.min.css">
-<link rel="stylesheet" href="/js/tiny-slider/dist/tiny-slider.css">
 
 {{- with resources.Get "icons/bootstrap-icons.css" }}
   {{- if eq hugo.Environment "development" }}
@@ -18,7 +12,14 @@
   {{- end }}
 {{- end }}
 
-{{- with resources.Get "sass/bootstrap.scss" | toCSS }}
+<link rel="stylesheet" href="/ayroui/css/bootstrap.min.css">
+<link rel="stylesheet" href="/ayroui/css/lineicons.css">
+<link rel="stylesheet" href="/ayroui/css/glightbox.min.css">
+<link rel="stylesheet" href="/ayroui/css/starter.css">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/fontawesome/css/all.min.css">
+
+{{- with resources.Get "ayarosass/all-components.scss" | toCSS }}
   {{- if eq hugo.Environment "development" }}
     <link rel="stylesheet" href="{{ .RelPermalink }}">
   {{- else }}
@@ -28,14 +29,6 @@
   {{- end }}
 {{- end }}
 
-{{- with resources.Get "sass/custom.scss" | toCSS }}
-  {{- if eq hugo.Environment "development" }}
-    <link rel="stylesheet" href="{{ .RelPermalink }}">
-  {{- else }}
-    {{- with . | minify | fingerprint }}
-      <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
-    {{- end }}
-  {{- end }}
-{{- end }}
+
 
 

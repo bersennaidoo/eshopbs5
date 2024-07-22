@@ -1,51 +1,137 @@
-{{- /*
-Renders a menu for the given menu ID.
+<section class="navbar-area navbar-ten fixed-top">
+    <div class="container">
+      <div class="inner-header">
+        <div class="row">
+          <div class="col-lg-12">
+            <nav class="navbar navbar-expand-lg">
+              <a class="navbar-brand" href="javascript:void(0)">
+                <img src="../assets/images/logo.svg" alt="Logo" />
+              </a>
 
-@context {page} page The current page.
-@context {string} menuID The menu ID.
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarEight"
+                aria-controls="navbarEight"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="toggler-icon"></span>
+                <span class="toggler-icon"></span>
+                <span class="toggler-icon"></span>
+              </button>
 
-@example: {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
-*/}}
+              <div
+                class="collapse navbar-collapse sub-menu-bar"
+                id="navbarEight"
+              >
+                <ul class="navbar-nav ms-auto">
+                  <li class="nav-item">
+                    <a
+                      class="page-scroll active"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#sub-nav15"
+                      aria-controls="sub-nav15"
+                      aria-expanded="false"
+                      aria-label="Toggle navigation"
+                      href="javascript:void(0)"
+                      >Home
+                      <div class="sub-nav-toggler">
+                        <span><i class="lni lni-chevron-down"></i></span>
+                      </div>
+                    </a>
+                    <ul class="sub-menu collapse" id="sub-nav15">
+                      <li><a href="javascript:void(0)">Corporate Home</a></li>
+                      <li><a href="javascript:void(0)">Agency Home</a></li>
+                      <li><a href="javascript:void(0)">Personal Home</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a href="javascript:void(0)">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="javascript:void(0)">Services</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="javascript:void(0)">Our Blog</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="javascript:void(0)">Contact</a>
+                  </li>
+                </ul>
+              </div>
 
-{{- $page := .page }}
-{{- $menuID := .menuID }}
+              <form class="d-flex search-form">
+                <input
+                  class="form-control me-2"
+                  type="search"
+                  placeholder="Search"
+                  aria-label="Search"
+                />
+                <button class="btn btn-outline-success" type="submit">
+                  <i class="lni lni-search-alt"></i>
+                </button>
+              </form>
+            </nav>
+            <!-- navbar -->
+          </div>
+        </div>
+        <!-- row -->
+      </div>
+    </div>
+    <!-- container -->
+  </section>
 
-{{- with index site.Menus $menuID }}
-  <nav>
-    <ul>
-      {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
-    </ul>
-  </nav>
-{{- end }}
+  <!--====== NAVBAR TEN PART ENDS ======-->
 
-{{- define "partials/inline/menu/walk.html" }}
-  {{- $page := .page }}
-  {{- range .menuEntries }}
-    {{- $attrs := dict "href" .URL }}
-    {{- if $page.IsMenuCurrent .Menu . }}
-      {{- $attrs = merge $attrs (dict "class" "active" "aria-current" "page") }}
-    {{- else if $page.HasMenuCurrent .Menu .}}
-      {{- $attrs = merge $attrs (dict "class" "ancestor" "aria-current" "true") }}
-    {{- end }}
-    {{- $name := .Name }}
-    {{- with .Identifier }}
-      {{- with T . }}
-        {{- $name = . }}
-      {{- end }}
-    {{- end }}
-    <li>
-      <a
-        {{- range $k, $v := $attrs }}
-          {{- with $v }}
-            {{- printf " %s=%q" $k $v | safeHTMLAttr }}
-          {{- end }}
-        {{- end -}}
-      >{{ $name }}</a>
-      {{- with .Children }}
+  <!--====== SIDEBAR PART START ======-->
+
+  <div class="sidebar-left">
+    <div class="sidebar-close">
+      <a class="close" href="#close"><i class="lni lni-close"></i></a>
+    </div>
+    <div class="sidebar-content">
+      <div class="sidebar-logo">
+        <a href="javascript:void(0)"
+          ><img src="../assets/images/logo.svg" alt="Logo"
+        /></a>
+      </div>
+      <!-- logo -->
+      <div class="sidebar-menu">
         <ul>
-          {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
+          <li><a href="javascript:void(0)">ABOUT</a></li>
+          <li><a href="javascript:void(0)">SERVICES</a></li>
+          <li><a href="javascript:void(0)">RESOURCES</a></li>
+          <li><a href="javascript:void(0)">CONTACT</a></li>
         </ul>
-      {{- end }}
-    </li>
-  {{- end }}
-{{- end }}
+      </div>
+      <!-- menu -->
+      <div class="sidebar-social align-items-center justify-content-center">
+        <span>FOLLOW US</span>
+        <ul>
+          <li>
+            <a href="javascript:void(0)"
+              ><i class="lni lni-facebook-filled"></i
+            ></a>
+          </li>
+          <li>
+            <a href="javascript:void(0)"
+              ><i class="lni lni-twitter-original"></i
+            ></a>
+          </li>
+          <li>
+            <a href="javascript:void(0)"
+              ><i class="lni lni-linkedin-original"></i
+            ></a>
+          </li>
+          <li>
+            <a href="javascript:void(0)"><i class="lni lni-youtube"></i></a>
+          </li>
+        </ul>
+      </div>
+      <!-- sidebar social -->
+    </div>
+    <!-- content -->
+  </div>
+  <div class="overlay-left"></div>
