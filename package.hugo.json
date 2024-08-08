@@ -1,4 +1,31 @@
 {
   "name": "eshopbs5",
-  "version": "0.1.0"
+  "version": "0.1.0",
+  "dependencies": {
+      "bootstrap": "^5.3.3",
+      "jquery": "^3.7.1",
+      "@popperjs/core": "^2.11.8",
+      "react": "^18.2.0",
+      "react-dom": "^18.2.0",
+      "@fortawesome/fontawesome-free": "^6.5.2",
+      "@testing-library/jest-dom": "^5.11.10",
+      "@testing-library/react": "^11.2.6",
+      "@testing-library/user-event": "^12.8.3",
+      "@types/jest": "^26.0.22",
+      "@types/node": "^12.20.7",
+      "@types/react": "^17.0.3",
+      "@types/react-dom": "^18.0.3",
+      "animate.css": "^4.1.1",
+      "axios": "^0.21.1",
+      "hover.css": "*",
+      "esbuild": "*",
+      "@clerk/clerk-react": "*",
+      "react-router-dom": "^6",
+      "jquery.easing": "^1.4.1",
+      "lightbox2": "^2.11.4",
+      "tiny-slider": "*",
+      "waypoints": "^4.0.1",
+      "wow.js": "^1.2.1"
+  }
 }
+

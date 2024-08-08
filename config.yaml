@@ -1,13 +1,16 @@
 baseURL: 'https://example.org/'
 languageCode: 'en-us'
 title: 'SurgiMedShop'
-theme: 'bs5theme'
 enableGitInfo: true
 
 module:
   mounts:
-    - source: "node_modules/bootstrap/scss"
-      target: "assets/scss"
+    - source: "assets"
+      target: "assets"
+    - source: "static"
+      target: "static"
+    - source: "node_modules/bootstrap"
+      target: "assets/scss/bootstrap"
     - source: "node_modules/@fortawesome/fontawesome-free"
       target: "static/fontawesome"
     - source: "node_modules"
