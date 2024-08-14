@@ -25,7 +25,8 @@
       "lightbox2": "^2.11.4",
       "tiny-slider": "*",
       "waypoints": "^4.0.1",
-      "wow.js": "^1.2.1"
+      "wow.js": "^1.2.1",
+      "lowdb": "^7.0.1"
   }
 }
 

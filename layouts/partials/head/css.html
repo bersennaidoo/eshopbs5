@@ -12,7 +12,9 @@
   {{- end }}
 {{- end }}
 
-{{- with resources.Get "scss/bootstrap.scss" | toCSS }}
+<link rel="stylesheet" href="/fontawesome/css/all.min.css">
+
+{{- with resources.Get "scss/bootstrap-custom.scss" | toCSS }}
   {{- if eq hugo.Environment "development" }}
     <link rel="stylesheet" href="{{ .RelPermalink }}">
   {{- else }}

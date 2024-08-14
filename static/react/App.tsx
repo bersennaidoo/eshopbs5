@@ -1,36 +1,51 @@
-import React, { FunctionComponent, useState } from "react";
-import {
-  Product,
-  ProductSelection,
-  ProductSelectionMutations,
-} from "./data/entities";
-import ProductList from "./components/ProductList";
+import React, { FC, useEffect, useState } from "react";
+import createDB from "./data/db";
+import { SuperStoreDB, Product } from "./data/db";
+import axios, { AxiosResponse } from "axios";
 
-let testData: Product[] = [1, 2, 3, 4, 5].map((num) => ({
-  id: num,
-  name: `Prod${num}`,
-  category: `Cat${num % 2}`,
-  description: `Product ${num}`,
-  price: 100,
-}));
-export const App: FunctionComponent = () => {
-  const [selections, setSelections] = useState(Array<ProductSelection>());
-  const addToOrder = (product: Product, quantity: number) => {
-    setSelections((curr) => {
-      ProductSelectionMutations.addProduct(curr, product, quantity);
-      return [...curr];
+const sdb: SuperStoreDB = {
+  products: [],
+};
+
+const cdb = (d: SuperStoreDB): Product[] => {
+    let db = createDB(d);
+    db.data.products.push({
+      id: "1",
+      name: "Syringe1",
+      image: "/images/800x600.png",
+      slug: "/800x600.png",
+      price: 10,
+      description: "a syringe",
     });
+
+    db.write();
+    const { products } = db.data;
+    return products;
   };
-  const categories = [...new Set(testData.map((p) => p.category))];
+
+
+export const App: FC = () => {
+  const [prods, setProds] = useState<Product[]>([]);
+
+  useEffect(() => {
+    axios.get("/react/data/db.json")
+         .then((res) => {
+          setProds([...prods, ...res.data])
+         })
+         .catch((err) => console.log(err))
+  }, []);
+
   return (
-    <div className="App">
-      <ProductList
-        products={testData}
-        categories={categories}
-        selections={selections}
-        addToOrder={addToOrder}
-      />
+    <div>
+      {prods.map((p) => (
+        <div key={p.name}>
+          <h1>{p.name}</h1>
+          <p>{p.description}</p>
+          <img src={p.image} />
+        </div>
+      ))}
     </div>
   );
 };
+
 export default App;

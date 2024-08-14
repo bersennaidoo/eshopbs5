@@ -22,10 +22,26 @@ menus:
       name: "Home"
       url: "/"
       weight: 100
+    - identifier: "About"
+      name: "About"
+      url: "/about"
+      weight: 110
+    - indentifier: "Contact"
+      name: "Contact"
+      url: "/contact"
+      weight: 120
     - identifier: "Shop"
       name: "Shop"
       url: "/shop"
       weight: 200
+    - indentifier: "Delivery"
+      name: "Delivery"
+      url: "/delivery"
+      weight: 300
+    - indentifier: "Privacy"
+      name: "Privacy"
+      url: "/privacy"
+      weight: 400
 
   footer:
      - identifier: "About"
