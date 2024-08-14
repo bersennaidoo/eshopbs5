@@ -3,9 +3,9 @@ import { LocalStoragePreset } from '../../../node_modules/lowdb/lib/browser.js'
 export type Product = {
     id: string
     name: string,
+    price: string,
+    url: string,
     image: string,
-    slug: string,
-    price: number,
     description: string,
 }
 

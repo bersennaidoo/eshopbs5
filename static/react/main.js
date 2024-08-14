@@ -2382,9 +2382,9 @@ var require_react_dom_development = __commonJS({
         if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== "undefined" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart === "function") {
           __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(new Error());
         }
-        var React3 = require_react();
+        var React5 = require_react();
         var Scheduler = require_scheduler();
-        var ReactSharedInternals = React3.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+        var ReactSharedInternals = React5.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
         var suppressWarning = false;
         function setSuppressWarning(newSuppressWarning) {
           {
@@ -3989,7 +3989,7 @@ var require_react_dom_development = __commonJS({
           {
             if (props.value == null) {
               if (typeof props.children === "object" && props.children !== null) {
-                React3.Children.forEach(props.children, function(child) {
+                React5.Children.forEach(props.children, function(child) {
                   if (child == null) {
                     return;
                   }
@@ -24853,27 +24853,54 @@ var require_axios2 = __commonJS({
 });
 
 // static/react/main.tsx
-var import_react2 = __toESM(require_react());
+var import_react4 = __toESM(require_react());
 var import_client = __toESM(require_client());
 
 // static/react/App.tsx
-var import_react = __toESM(require_react());
+var import_react3 = __toESM(require_react());
 var import_axios = __toESM(require_axios2());
+
+// static/react/components/Home.tsx
+var import_react2 = __toESM(require_react());
+
+// static/react/components/Thumbnail.tsx
+var import_react = __toESM(require_react());
+var Thumbnail = (props) => {
+  const { image, name } = props;
+  return /* @__PURE__ */ import_react.default.createElement("a", { href: "#todo", className: "hvr-grow" }, /* @__PURE__ */ import_react.default.createElement("div", null, /* @__PURE__ */ import_react.default.createElement("img", { className: "img-fluid", src: image, alt: name })), /* @__PURE__ */ import_react.default.createElement("p", null, name));
+};
+var Thumbnail_default = Thumbnail;
+
+// static/react/components/Home.tsx
+var Home = (props) => {
+  const { products } = props;
+  return /* @__PURE__ */ import_react2.default.createElement("div", { className: "container" }, /* @__PURE__ */ import_react2.default.createElement("div", { className: "row" }, products.map((prod) => /* @__PURE__ */ import_react2.default.createElement("div", { className: "col-md-4" }, /* @__PURE__ */ import_react2.default.createElement(
+    Thumbnail_default,
+    {
+      key: prod.id,
+      image: prod.image,
+      name: prod.name
+    }
+  )))));
+};
+var Home_default = Home;
+
+// static/react/App.tsx
 var App = () => {
-  const [prods, setProds] = (0, import_react.useState)([]);
-  (0, import_react.useEffect)(() => {
+  const [prods, setProds] = (0, import_react3.useState)([]);
+  (0, import_react3.useEffect)(() => {
     import_axios.default.get("/react/data/db.json").then((res) => {
       setProds([...prods, ...res.data]);
     }).catch((err) => console.log(err));
   }, []);
-  return /* @__PURE__ */ import_react.default.createElement("div", null, prods.map((p) => /* @__PURE__ */ import_react.default.createElement("div", { key: p.name }, /* @__PURE__ */ import_react.default.createElement("h1", null, p.name), /* @__PURE__ */ import_react.default.createElement("p", null, p.description), /* @__PURE__ */ import_react.default.createElement("img", { src: p.image }))));
+  return /* @__PURE__ */ import_react3.default.createElement("div", null, /* @__PURE__ */ import_react3.default.createElement(Home_default, { products: prods }));
 };
 var App_default = App;
 
 // static/react/main.tsx
 var root = import_client.default.createRoot(document.getElementById("root"));
 root.render(
-  /* @__PURE__ */ import_react2.default.createElement(import_react2.default.StrictMode, null, /* @__PURE__ */ import_react2.default.createElement(App_default, null))
+  /* @__PURE__ */ import_react4.default.createElement(import_react4.default.StrictMode, null, /* @__PURE__ */ import_react4.default.createElement(App_default, null))
 );
 /*! Bundled license information:
 
