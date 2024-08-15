@@ -26863,7 +26863,7 @@ var ProductDetail = (props) => {
   return /* @__PURE__ */ import_react6.default.createElement("div", null, /* @__PURE__ */ import_react6.default.createElement("img", { className: "img-thumbnail", src: product?.image, alt: product?.name }), /* @__PURE__ */ import_react6.default.createElement("h2", null, product?.name), /* @__PURE__ */ import_react6.default.createElement("div", null, "$", product?.price), /* @__PURE__ */ import_react6.default.createElement(
     "button",
     {
-      className: "btn btn-primary",
+      className: "snipcart-add-item",
       "data-item-id": product?.id,
       "data-item-name": product?.name,
       "data-item-price": product?.price,

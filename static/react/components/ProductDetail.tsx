@@ -19,7 +19,7 @@ const ProductDetail = (props: IProductDetailProps) => {
                 ${product?.price}
             </div>
              <button 
-                   className="btn btn-primary"
+                   className="snipcart-add-item"
                    data-item-id={product?.id}
                    data-item-name={product?.name}
                    data-item-price={product?.price}
