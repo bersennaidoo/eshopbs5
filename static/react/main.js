@@ -26863,7 +26863,7 @@ var ProductDetail = (props) => {
   return /* @__PURE__ */ import_react6.default.createElement("div", null, /* @__PURE__ */ import_react6.default.createElement("img", { className: "img-thumbnail", src: product?.image, alt: product?.name }), /* @__PURE__ */ import_react6.default.createElement("h2", null, product?.name), /* @__PURE__ */ import_react6.default.createElement("div", null, "$", product?.price), /* @__PURE__ */ import_react6.default.createElement(
     "button",
     {
-      className: "snipcart-add-item",
+      className: "snipcart-add-item btn btn-primary",
       "data-item-id": product?.id,
       "data-item-name": product?.name,
       "data-item-price": product?.price,
@@ -26884,6 +26884,9 @@ var App = () => {
       setProds([...prods, ...res.data]);
     }).catch((err) => console.log(err));
   }, []);
+  if (prods.length === 0) {
+    return /* @__PURE__ */ import_react7.default.createElement("div", null, "Loading...");
+  }
   return /* @__PURE__ */ import_react7.default.createElement(BrowserRouter, null, /* @__PURE__ */ import_react7.default.createElement(Header_default, null), /* @__PURE__ */ import_react7.default.createElement(Routes, null, /* @__PURE__ */ import_react7.default.createElement(Route, { path: "/shop/details", element: /* @__PURE__ */ import_react7.default.createElement(Details_default, { products: prods }) }, /* @__PURE__ */ import_react7.default.createElement(Route, { index: true, element: /* @__PURE__ */ import_react7.default.createElement("div", null, "No Product Selected") }), /* @__PURE__ */ import_react7.default.createElement(Route, { path: ":id", element: /* @__PURE__ */ import_react7.default.createElement(ProductDetail_default, { products: prods }) })), /* @__PURE__ */ import_react7.default.createElement(Route, { path: "/shop", element: /* @__PURE__ */ import_react7.default.createElement(Shop_default, { products: prods }) }), /* @__PURE__ */ import_react7.default.createElement(Route, { path: "*", element: /* @__PURE__ */ import_react7.default.createElement(NotFound_default, null) })));
 };
 var App_default = App;

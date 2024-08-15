@@ -20,6 +20,10 @@ export const App: FC = () => {
          .catch((err) => console.log(err))
   }, []);
 
+  if (prods.length === 0) {
+    return <div>Loading...</div>
+  }
+
   return (
     <Router>
       <Header />
