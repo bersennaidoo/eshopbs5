@@ -26867,7 +26867,6 @@ var ProductDetail = (props) => {
       "data-item-id": product?.id,
       "data-item-name": product?.name,
       "data-item-price": product?.price,
-      "data-item-url": product?.url,
       "data-item-image": product?.image,
       "data-item-description": product?.description
     },
