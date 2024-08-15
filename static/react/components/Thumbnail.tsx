@@ -1,20 +1,21 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { IProduct } from "../data/entities";
 
 interface IThumbnailProps {
-    image: string
-    name: string
+    product: IProduct
 }
 
 const Thumbnail = (props: IThumbnailProps) => {
-    const { image, name } = props
+    const { product } = props
 
     return (
-        <a href="#todo" className="hvr-grow">
+        <Link to={`/shop/details/${product.id}`} className="hvr-grow">
             <div>
-                <img className="img-fluid" src={image} alt={name} />
+                <img className="img-thumbnail" src={product.image} alt={product.name} />
             </div>
-            <p>{name}</p>
-        </a>
+            <p>{product.name}</p>
+        </Link>
     )
 }
 

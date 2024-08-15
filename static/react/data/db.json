@@ -3,7 +3,7 @@
     "id": "1",
     "name": "Syringe1",
     "price": 10,
-    "url": "/shop/product",
+    "url": "/shop/details/1",
     "image": "/images/800x600.png",
     "description": "a syringe 1"
   },
@@ -11,7 +11,7 @@
     "id": "2",
     "name": "Syringe2",
     "price": 15,
-    "url": "/shop/product",
+    "url": "/shop/details/2",
     "image": "/images/800x600.png",
     "description": "a syringe 2"
   },
@@ -19,7 +19,7 @@
     "id": "3",
     "name": "Syringe3",
     "price": 18,
-    "url": "/shop/product",
+    "url": "/shop/details/3",
     "image": "/images/800x600.png",
     "description": "a syringe 3"
   },
@@ -27,7 +27,7 @@
     "id": "4",
     "name": "Needle1",
     "price": 10,
-    "url": "/shop/product",
+    "url": "/shop/details/4",
     "image": "/images/800x600.png",
     "description": "a needle 1"
   },
@@ -35,7 +35,7 @@
     "id": "5",
     "name": "Needle2",
     "price": 10,
-    "url": "/shop/product",
+    "url": "/shop/details/5",
     "image": "/images/800x600.png",
     "description": "a needle 2"
   },
@@ -43,7 +43,7 @@
     "id": "6",
     "name": "Needle3",
     "price": 10,
-    "url": "/shop/product",
+    "url": "/shop/details/6",
     "image": "/images/800x600.png",
     "description": "a needle 3"
   }

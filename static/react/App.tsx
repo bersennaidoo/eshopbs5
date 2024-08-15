@@ -1,10 +1,13 @@
 import React, { FC, useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
-import Product, { IProduct } from "./components/Product";
+import Product from "./components/Product";
+import { IProduct } from "./data/entities";
 import axios from "axios";
-import ProductList from "./components/ProductList";
 import NotFound from "./components/NotFound";
-import Home from "./components/Home";
+import Shop from "./components/Shop"
+import Header from "./components/Header"
+import Details from "./components/Details"
+import ProductDetail from "./components/ProductDetail";
 
 export const App: FC = () => {
   const [prods, setProds] = useState<IProduct[]>([]);
@@ -18,9 +21,17 @@ export const App: FC = () => {
   }, []);
 
   return (
-    <div>
-      <Home products={prods} />
-    </div>
+    <Router>
+      <Header />
+      <Routes>
+        <Route path="/shop/details" element={<Details products={prods}/>} >
+          <Route index element={<div>No Product Selected</div>} />
+          <Route path=":id" element={<ProductDetail products={prods}/>} />
+        </Route>
+        <Route path="/shop" element={<Shop products={prods} />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </Router>
   );
 };
 

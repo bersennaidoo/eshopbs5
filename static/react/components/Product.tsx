@@ -1,13 +1,5 @@
 import React from "react"
-
-export interface IProduct {
-    id: string 
-    name: string 
-    price: number 
-    url: string 
-    description: string 
-    image: string
-}
+import { IProduct } from "../data/entities"
 
 interface IProductProps {
     product: IProduct

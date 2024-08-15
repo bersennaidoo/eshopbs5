@@ -1,23 +1,21 @@
 import React from "react"
-import {IProduct} from "./Product"
+import { IProduct } from "../data/entities"
 import Thumbnail from "./Thumbnail"
 
-interface IHomeProps {
+interface IShopProps {
     products: IProduct[]
 }
 
-const Home = (props: IHomeProps) => {
+const Shop = (props: IShopProps) => {
     const { products } = props
 
     return (
         <div className="container">
             <div className="row">
             {products.map((prod) => (
-                <div className="col-md-4">
+                <div className="col-md-4 mt-4" key={prod.id}>
                 <Thumbnail
-                  key={prod.id}
-                  image={prod.image}
-                  name={prod.name}
+                  product={prod}
                 />
                 </div>
             ))}
@@ -26,4 +24,4 @@ const Home = (props: IHomeProps) => {
     )
 }
 
-export default Home
+export default Shop
