@@ -13,13 +13,13 @@ const ProductDetail = (props: IProductDetailProps) => {
 
     return (
         <div>
-            <img className="img-thumbnail" src={product?.image} alt={product?.name} />
+            <img className="img-thumbnail hvr-grow" src={product?.image} alt={product?.name} />
             <h2>{product?.name}</h2>
             <div>
                 ${product?.price}
             </div>
              <button 
-                   className="snipcart-add-item btn btn-primary"
+                   className="snipcart-add-item btn btn-primary hvr-grow"
                    data-item-id={product?.id}
                    data-item-name={product?.name}
                    data-item-price={product?.price}

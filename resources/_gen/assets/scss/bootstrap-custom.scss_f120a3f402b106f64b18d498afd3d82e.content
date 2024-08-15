@@ -180,11 +180,11 @@
   --bs-tertiary-bg: #f8f9fa;
   --bs-tertiary-bg-rgb: 248, 249, 250;
   --bs-heading-color: inherit;
-  --bs-link-color: #0dcaf0;
-  --bs-link-color-rgb: 13, 202, 240;
+  --bs-link-color: #766f57;
+  --bs-link-color-rgb: 118, 111, 87;
   --bs-link-decoration: none;
-  --bs-link-hover-color: #0aa2c0;
-  --bs-link-hover-color-rgb: 10, 162, 192;
+  --bs-link-hover-color: #5e5946;
+  --bs-link-hover-color-rgb: 94, 89, 70;
   --bs-link-hover-decoration: underline;
   --bs-code-color: #d63384;
   --bs-highlight-color: #212529;

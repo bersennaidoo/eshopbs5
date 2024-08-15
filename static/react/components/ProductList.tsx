@@ -7,7 +7,7 @@ interface IDetailsProps {
   products: IProduct[];
 }
 
-const Details = (props: IDetailsProps) => {
+const ProductList = (props: IDetailsProps) => {
   const { products } = props;
 
   return (
@@ -30,4 +30,4 @@ const Details = (props: IDetailsProps) => {
   );
 };
 
-export default Details;
+export default ProductList;

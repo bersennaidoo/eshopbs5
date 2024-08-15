@@ -1,12 +1,11 @@
 import React, { FC, useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
-import Product from "./components/Product";
 import { IProduct } from "./data/entities";
 import axios from "axios";
 import NotFound from "./components/NotFound";
 import Shop from "./components/Shop"
 import Header from "./components/Header"
-import Details from "./components/Details"
+import ProductList from "./components/ProductList"
 import ProductDetail from "./components/ProductDetail";
 
 export const App: FC = () => {
@@ -28,7 +27,7 @@ export const App: FC = () => {
     <Router>
       <Header />
       <Routes>
-        <Route path="/shop/details" element={<Details products={prods}/>} >
+        <Route path="/shop/details" element={<ProductList products={prods}/>} >
           <Route index element={<div>No Product Selected</div>} />
           <Route path=":id" element={<ProductDetail products={prods}/>} />
         </Route>
