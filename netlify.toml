@@ -7,6 +7,3 @@ HUGO_VERSION = "0.124.1"
 HUGO_ENV = "production"
 HUGO_ENABLEGITINFO = "true"
 GO_IMPORT_PATH = "github.com/bersennaidoo/eshopbs5"
-
-[functions]
-included_files = ["netlify/functions/**/*.json"]
