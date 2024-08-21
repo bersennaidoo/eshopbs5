@@ -15,7 +15,7 @@ interface Post {
 
 export const App: FC = () => {
   const [prods, setProds] = useState<IProduct[]>([]);
-  const [post, setPost] = useState<Post[]>([])
+  const [post, setPost] = useState<string>("")
 
   useEffect(() => {
     axios
@@ -30,9 +30,7 @@ export const App: FC = () => {
     axios
       .get("/.netlify/functions/hello")
       .then((res) => {
-        setPost((prev) => (
-          [...prev, ...res.data]
-        ));
+        setPost(res.data)
       })
       .catch((err) => console.log(err));
   }, []);
@@ -43,11 +41,6 @@ export const App: FC = () => {
 
   return (
     <Router>
-      {
-        post.map((p) => (
-          <h1 key={p.id}>{p.title}</h1>
-        ))
-      }
       <Header />
       <Routes>
         <Route path="/shop/details" element={<ProductList products={prods} />}>
