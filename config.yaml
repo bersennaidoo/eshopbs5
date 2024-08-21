@@ -38,14 +38,18 @@ menus:
       name: "Shop"
       url: "/shop"
       weight: 200
-    - indentifier: "Delivery"
+    - identifier: "Delivery"
       name: "Delivery"
       url: "/delivery"
       weight: 300
-    - indentifier: "Privacy"
+    - identifier: "Privacy"
       name: "Privacy"
       url: "/privacy"
       weight: 400
+    - identifier: Contact
+      name: Contact
+      url: /contact
+      weight: 500
 
   footer:
      - identifier: "About"
