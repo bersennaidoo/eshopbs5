@@ -41,6 +41,7 @@ export const App: FC = () => {
 
   return (
     <Router>
+      <h1>{post}</h1>
       <Header />
       <Routes>
         <Route path="/shop/details" element={<ProductList products={prods} />}>
