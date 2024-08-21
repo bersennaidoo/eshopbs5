@@ -17,15 +17,6 @@ export const App: FC = () => {
   const [prods, setProds] = useState<IProduct[]>([]);
   const [post, setPost] = useState<Post[]>([])
 
-  const fetchData = async () => {
-    const { data } = await axios.get("/.netlify/functions/hello")
-    setPost(data)
-  }
-
-  useEffect(() => {
-    fetchData()
-  }, [])
-
   useEffect(() => {
     axios
       .get("/react/data/db.json")
@@ -35,7 +26,7 @@ export const App: FC = () => {
       .catch((err) => console.log(err));
   }, []);
 
-  {/*useEffect(() => {
+  useEffect(() => {
     axios
       .get("/.netlify/functions/hello")
       .then((res) => {
@@ -44,7 +35,7 @@ export const App: FC = () => {
         ));
       })
       .catch((err) => console.log(err));
-  }, [post]);*/}
+  }, []);
 
   if (prods.length === 0) {
     return <div>Loading...</div>;

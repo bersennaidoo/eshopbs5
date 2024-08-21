@@ -26880,20 +26880,16 @@ var ProductDetail_default = ProductDetail;
 var App = () => {
   const [prods, setProds] = (0, import_react7.useState)([]);
   const [post, setPost] = (0, import_react7.useState)([]);
-  const fetchData = async () => {
-    const { data } = await import_axios.default.get("http://localhost:8888/.netlify/functions/hello");
-    setPost(data);
-  };
-  (0, import_react7.useEffect)(() => {
-    fetchData();
-  }, []);
   (0, import_react7.useEffect)(() => {
     import_axios.default.get("/react/data/db.json").then((res) => {
       setProds([...prods, ...res.data]);
     }).catch((err) => console.log(err));
   }, []);
-  {
-  }
+  (0, import_react7.useEffect)(() => {
+    import_axios.default.get("/.netlify/functions/hello").then((res) => {
+      setPost((prev) => [...prev, ...res.data]);
+    }).catch((err) => console.log(err));
+  }, []);
   if (prods.length === 0) {
     return /* @__PURE__ */ import_react7.default.createElement("div", null, "Loading...");
   }

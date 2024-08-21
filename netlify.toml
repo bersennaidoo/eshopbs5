@@ -1,5 +1,6 @@
 [build]
 publish = "public"
+functions = "netlify/functions/hello"
 command = "npm i && node ./esmscript.prod.mjs && hugo --gc --minify"
 
 [context.production.environment]
