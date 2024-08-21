@@ -1,9 +1,11 @@
 [build]
 publish = "public"
-functions = "netlify/functions/hello"
 command = "npm i && node ./esmscript.prod.mjs && hugo --gc --minify"
 
 [context.production.environment]
 HUGO_VERSION = "0.124.1"
 HUGO_ENV = "production"
 HUGO_ENABLEGITINFO = "true"
+
+[functions]
+included_files = ["netlify/functions/**/*.json"]
