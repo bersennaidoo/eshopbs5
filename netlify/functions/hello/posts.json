@@ -1,2 +1,12 @@
 {
+	"posts": [
+		{
+			"id": "fae5bdc0-4ce7-4ea8-957b-ce2fbb04f5f7",
+			"title": "Hello from Lowdb golang"
+		},
+		{
+			"id": "48331594-4979-4166-83bf-401ca9049ca9",
+			"title": "Hello from Lowdb golang"
+		}
+	]
 }
