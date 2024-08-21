@@ -8,9 +8,14 @@ import Header from "./components/Header";
 import ProductList from "./components/ProductList";
 import ProductDetail from "./components/ProductDetail";
 
+interface Post {
+  id: string
+  title: string
+}
+
 export const App: FC = () => {
   const [prods, setProds] = useState<IProduct[]>([]);
-  const [post, setPost] = useState([])
+  const [post, setPost] = useState<Post[]>([])
 
   const fetchData = async () => {
     const { data } = await axios.get("/.netlify/functions/hello")
