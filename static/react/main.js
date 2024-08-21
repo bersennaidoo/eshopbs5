@@ -26879,21 +26879,25 @@ var ProductDetail_default = ProductDetail;
 // static/react/App.tsx
 var App = () => {
   const [prods, setProds] = (0, import_react7.useState)([]);
-  const [name, setName] = (0, import_react7.useState)("");
+  const [post, setPost] = (0, import_react7.useState)([]);
+  const fetchData = async () => {
+    const { data } = await import_axios.default.get("http://localhost:8888/.netlify/functions/hello");
+    setPost(data);
+  };
+  (0, import_react7.useEffect)(() => {
+    fetchData();
+  }, []);
   (0, import_react7.useEffect)(() => {
     import_axios.default.get("/react/data/db.json").then((res) => {
       setProds([...prods, ...res.data]);
     }).catch((err) => console.log(err));
   }, []);
-  (0, import_react7.useEffect)(() => {
-    import_axios.default.get("/.netlify/functions/hello").then((res) => {
-      setName(res.data);
-    }).catch((err) => console.log(err));
-  }, []);
+  {
+  }
   if (prods.length === 0) {
     return /* @__PURE__ */ import_react7.default.createElement("div", null, "Loading...");
   }
-  return /* @__PURE__ */ import_react7.default.createElement(BrowserRouter, null, /* @__PURE__ */ import_react7.default.createElement("h1", null, name), /* @__PURE__ */ import_react7.default.createElement(Header_default, null), /* @__PURE__ */ import_react7.default.createElement(Routes, null, /* @__PURE__ */ import_react7.default.createElement(Route, { path: "/shop/details", element: /* @__PURE__ */ import_react7.default.createElement(ProductList_default, { products: prods }) }, /* @__PURE__ */ import_react7.default.createElement(Route, { index: true, element: /* @__PURE__ */ import_react7.default.createElement("div", null, "No Product Selected") }), /* @__PURE__ */ import_react7.default.createElement(Route, { path: ":id", element: /* @__PURE__ */ import_react7.default.createElement(ProductDetail_default, { products: prods }) })), /* @__PURE__ */ import_react7.default.createElement(Route, { path: "/shop", element: /* @__PURE__ */ import_react7.default.createElement(Shop_default, { products: prods }) }), /* @__PURE__ */ import_react7.default.createElement(Route, { path: "*", element: /* @__PURE__ */ import_react7.default.createElement(NotFound_default, null) })));
+  return /* @__PURE__ */ import_react7.default.createElement(BrowserRouter, null, post.map((p) => /* @__PURE__ */ import_react7.default.createElement("h1", { key: p.id }, p.title)), /* @__PURE__ */ import_react7.default.createElement(Header_default, null), /* @__PURE__ */ import_react7.default.createElement(Routes, null, /* @__PURE__ */ import_react7.default.createElement(Route, { path: "/shop/details", element: /* @__PURE__ */ import_react7.default.createElement(ProductList_default, { products: prods }) }, /* @__PURE__ */ import_react7.default.createElement(Route, { index: true, element: /* @__PURE__ */ import_react7.default.createElement("div", null, "No Product Selected") }), /* @__PURE__ */ import_react7.default.createElement(Route, { path: ":id", element: /* @__PURE__ */ import_react7.default.createElement(ProductDetail_default, { products: prods }) })), /* @__PURE__ */ import_react7.default.createElement(Route, { path: "/shop", element: /* @__PURE__ */ import_react7.default.createElement(Shop_default, { products: prods }) }), /* @__PURE__ */ import_react7.default.createElement(Route, { path: "*", element: /* @__PURE__ */ import_react7.default.createElement(NotFound_default, null) })));
 };
 var App_default = App;
 

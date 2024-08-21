@@ -10,7 +10,16 @@ import ProductDetail from "./components/ProductDetail";
 
 export const App: FC = () => {
   const [prods, setProds] = useState<IProduct[]>([]);
-  const [name, setName] = useState<string>("");
+  const [post, setPost] = useState([])
+
+  const fetchData = async () => {
+    const { data } = await axios.get("/.netlify/functions/hello")
+    setPost(data)
+  }
+
+  useEffect(() => {
+    fetchData()
+  }, [])
 
   useEffect(() => {
     axios
@@ -21,14 +30,16 @@ export const App: FC = () => {
       .catch((err) => console.log(err));
   }, []);
 
-  useEffect(() => {
+  {/*useEffect(() => {
     axios
       .get("/.netlify/functions/hello")
       .then((res) => {
-        setName(res.data);
+        setPost((prev) => (
+          [...prev, ...res.data]
+        ));
       })
       .catch((err) => console.log(err));
-  }, []);
+  }, [post]);*/}
 
   if (prods.length === 0) {
     return <div>Loading...</div>;
@@ -36,7 +47,11 @@ export const App: FC = () => {
 
   return (
     <Router>
-      <h1>{name}</h1>
+      {
+        post.map((p) => (
+          <h1 key={p.id}>{p.title}</h1>
+        ))
+      }
       <Header />
       <Routes>
         <Route path="/shop/details" element={<ProductList products={prods} />}>
