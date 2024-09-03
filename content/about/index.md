@@ -1,10 +1,7 @@
 ---
 title: 'About'
-date: 2024-07-21T13:39:26+02:00
+date: 2024-08-24T14:30:42+02:00
 draft: false
-cont: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem commodi!"
+type: about
+layout: about
 ---
-
-{{< aboutlayout about="Our Company" history="Established in 1949" heading="About Us" container="container">}}
-
-

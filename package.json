@@ -2,6 +2,10 @@
   "comments": {
     "dependencies": {
       "@clerk/clerk-react": "project",
+      "@coreui/coreui": "project",
+      "@coreui/icons": "project",
+      "@coreui/icons-react": "project",
+      "@coreui/react": "project",
       "@fortawesome/fontawesome-free": "project",
       "@popperjs/core": "project",
       "@testing-library/jest-dom": "project",
@@ -31,6 +35,10 @@
   },
   "dependencies": {
     "@clerk/clerk-react": "*",
+    "@coreui/coreui": "^5.1.2",
+    "@coreui/icons": "^3.0.1",
+    "@coreui/icons-react": "^2.3.0",
+    "@coreui/react": "^5.3.0",
     "@fortawesome/fontawesome-free": "^6.5.2",
     "@popperjs/core": "^2.11.8",
     "@testing-library/jest-dom": "^5.11.10",
@@ -58,5 +66,9 @@
   },
   "devDependencies": {},
   "name": "eshopbs5",
+  "scripts": {
+    "esbuild:dev": "node ./esmscript.dev.mjs",
+    "tsc:dev": "tsc -w"
+  },
   "version": "0.1.0"
 }

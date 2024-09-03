@@ -7,6 +7,9 @@ import Shop from "./components/Shop";
 import Header from "./components/Header";
 import ProductList from "./components/ProductList";
 import ProductDetail from "./components/ProductDetail";
+import HeroCarousel from "./components/HeroCarousel";
+import EStoreCallout from "./components/EStoreCallout";
+import { CSpinner, CButton } from "@coreui/react"
 
 interface Post {
   id: string
@@ -36,13 +39,15 @@ export const App: FC = () => {
   }, []);
 
   if (prods.length === 0) {
-    return <div>Loading...</div>;
+    return <CSpinner className="bg-info" />
   }
 
   return (
     <Router>
       <h1>{post}</h1>
       <Header />
+      <HeroCarousel />
+      <EStoreCallout />
       <Routes>
         <Route path="/shop/details" element={<ProductList products={prods} />}>
           <Route index element={<div>No Product Selected</div>} />

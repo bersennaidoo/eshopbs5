@@ -1,0 +1,24 @@
+description: "A blazing fast website built with hugo react typescript and bootstrap 5"
+images:
+  - images/100x100.png
+  - images/800x600.png
+
+mainMenuLogo: images/100x100.png
+
+themeColor: "#fff"
+
+alert: false
+alertDismissable: true
+
+# Pre-footer
+footerAbout: true
+footerAboutTitle: "Few Words About Us"
+footerAboutText: >
+  We protect your website so you can provide a safe environment to build 
+  trust.
+
+options:
+  bootStrapJs: true
+  breadCrumb: true
+  listCategoryFilter: true
+  ListTagFilter: true

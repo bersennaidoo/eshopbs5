@@ -1,0 +1,22 @@
+// Jumbotron
+.jumbotron {
+    @extend .mt-4, .p-5, .bg-primary-200, .text-white, .rounded;
+}
+
+.home-main {
+    min-height: 700px;
+}
+
+.bg-estore-welcome {
+    background-image: url("/images/stubimg/images/profile/bg-1.jpg");
+    background-size: cover;
+    color: #504747;
+}
+
+.hero-section img {
+    max-block-size: 650px;
+}
+
+.contact-form-container {
+    inline-size: 60vw;
+}

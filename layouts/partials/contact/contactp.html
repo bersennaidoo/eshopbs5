@@ -1,0 +1,40 @@
+<div class="container mt-5 pt-5">
+  <h3 class="text-center text-uppercase pt-4">Contact us</h3>
+  <div
+    class="mx-auto contact-form-container text-muted shadow-sm rounded p-3 lh-2"
+  >
+    <form>
+      <div class="mb-3">
+        <label for="name" class="form-label">Fullname</label>
+        <input type="text" class="form-control" id="name" required />
+      </div>
+      <div class="mb-3">
+        <label for="phone" class="form-label">Contact no.</label>
+        <input type="text" class="form-control" id="phone" />
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="email" required />
+        <div id="emailHelp" class="form-text">
+          We'll never share your email with anyone else.
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="timing" class="form-label">When can we reach you?</label>
+        <select class="form-select" id="timing">
+          <option defaultValue="">Best time to reach</option>
+          <option value="M">Morning</option>
+          <option value="A">Afternoon</option>
+          <option value="E">Evening</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="query" class="form-label">Enter your query below</label>
+        <textarea class="form-control" id="query" required></textarea>
+      </div>
+      <div class="d-grid">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>

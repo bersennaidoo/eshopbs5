@@ -1,31 +1,64 @@
-import React from "react"
-import { Link } from "react-router-dom"
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
-interface IHeaderProps {}
+import CIcon from "@coreui/icons-react";
+import {
+  cilCloudDownload,
+  cilLayers,
+  cilPuzzle,
+  cilSpeedometer,
+} from "@coreui/icons";
 
-const Header = (props: IHeaderProps) => {
+import {
+  CBadge,
+  CSidebar,
+  CSidebarBrand,
+  CSidebarFooter,
+  CSidebarHeader,
+  CSidebarNav,
+  CSidebarToggler,
+  CNavGroup,
+  CNavGroupItems,
+  CNavItem,
+  CNavLink,
+  CNavTitle,
+} from "@coreui/react";
 
-    return (
-        <div className="container">
-            <div className="row">
-                <div className="col-md-4 pt-2">
-                    <ul>
-                        <li>
-                            <Link to="/shop">Shop</Link>
-                        </li>
-                        <li>
-                            <Link to="/shop/details">Product Details</Link>
-                        </li>
-                    </ul>
-                </div>
-                <div className="col-md-8 pt-3">
-                    <p className="display-1">
-                        Your friendly surgical shop
-                    </p>
-                </div>
-            </div>
-        </div>
-    )
-}
+const Header = () => {
+  return (
+    <CSidebar className="border-end">
+      <CSidebarHeader className="border-bottom">
+        <CSidebarBrand>Register Now</CSidebarBrand>
+      </CSidebarHeader>
+      <CSidebarNav>
+        <CNavTitle>Quick Links</CNavTitle>
+        <CNavGroup
+          className="border rounded"
+          toggler={
+            <>
+              <CIcon customClassName="nav-icon" icon={cilPuzzle} /> Settings
+            </>
+          }
+        >
+          <CNavItem href="#">
+            <span className="nav-icon">
+              <span className="nav-icon-bullet"></span>
+            </span>
+            Login
+          </CNavItem>
+          <CNavItem href="#">
+            <span className="nav-icon">
+              <span className="nav-icon-bullet"></span>
+            </span>
+            Logout
+          </CNavItem>
+        </CNavGroup>
+      </CSidebarNav>
+      <CSidebarHeader className="border-top">
+        <CSidebarToggler />
+      </CSidebarHeader>
+    </CSidebar>
+  );
+};
 
-export default Header
+export default Header;

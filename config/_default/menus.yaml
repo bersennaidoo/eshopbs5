@@ -1,0 +1,39 @@
+main:
+  - identifier: Home
+    name: Home
+    url: "/"
+    weight: 100
+  - identifier: Services
+    name: Services
+    url: /services
+    weight: 200
+  - identifier: blog
+    name: Blog
+    url: /blog
+    weight: 300
+  - identifier: Shop
+    name: Shop
+    url: /shop
+    weight: 400
+  - identifier: Gallery
+    name: Gallery
+    url: /gallery
+    weight: 500
+  - identifier: About
+    name: About
+    url: /about
+    weight: 600
+  - identifier: Contact
+    name: Contact
+    url: /contact
+    weight: 700
+
+footer:
+  - identifier: About
+    name: About
+    url: /about
+    weight: 100
+  - identifier: Shop
+    name: Shop
+    url: /shop
+    weight: 200

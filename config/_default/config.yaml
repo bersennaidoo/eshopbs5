@@ -1,0 +1,58 @@
+baseURL: 'https://eshopbs5.netlify.app/'
+languageCode: 'en-us'
+title: 'EStore'
+copyright: Copyright &copy; 2024
+author: "Bersen Naidoo"
+
+defaultContentLanguage: en
+defaultContentLanguageInSubdir: false
+
+disableHugoGeneratorInject: true
+enableRobotsTXT: true
+enableGitInfo: true
+enableEmoji: true
+#sectionPagesMenu: main 
+#googleAnalytics: "UA-1511XXXX-X"
+
+frontmatter:
+  date:
+    - date
+    - publishDate
+    - lastmod
+  lastmod:
+    - lastmod
+    - :fileModTime
+    - :default
+
+taxonomies:
+  tag: tags
+  category: categories
+  series: series
+  authors: authors
+
+sitemap:
+  changefreq: weekly
+  filename: sitemap.xml
+  priority: 0.5
+
+permalinks:
+# post: /post/:title
+
+module:
+  mounts:
+    - source: "assets"
+      target: "assets"
+    - source: "static"
+      target: "static"
+    - source: "node_modules/bootstrap"
+      target: "assets/scss/bootstrap"
+    - source: "node_modules"
+      target: "static/js"
+    - source: "node_modules/@fortawesome/fontawesome-free"
+      target: "static"
+    - source: "node_modules"
+      target: "assets/css"
+    - source: "node_modules/@fortawesome/fontawesome-free/scss"
+      target: "assets/css"
+    - source: "node_modules/@coreui/coreui"
+      target: "static/coreui"

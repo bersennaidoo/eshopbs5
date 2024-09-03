@@ -4,15 +4,11 @@
   {{ partial "head.html" . }}
 </head>
 <body class="">
-  <header>
+  <header class="">
     {{ partial "header.html" . }}
   </header>
-  <main class="pt-5 mt-5">
     {{ block "main" . }}{{ end }}
-  </main>
-  <footer>
-  {{ partial "footer.html" . }}
-  </footer>
+    {{ partial "footer.html" . }}
   {{ partial "snipcartscript.html" . }}
 </body>
 </html>
